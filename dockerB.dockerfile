@@ -1,7 +1,7 @@
 FROM node:latest
-RUN apt-get update
-RUN npm install -g npm@8.10.0
-RUN npm fund
+RUN nvm install 14
+RUN nvm use 14
+RUN npm install --legacy-peer-deps 
 RUN git clone https://github.com/deltachat/deltachat-desktop.git
 WORKDIR /deltachat-desktop/
 RUN npm i && npm run build
