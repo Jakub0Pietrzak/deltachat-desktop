@@ -7,7 +7,7 @@ pipeline {
             steps {
                
                echo 'build'
-                    sh 'docker build . -f dockerfile_build -t build-chat'
+                    sh 'docker build . -f dockerB.dockerfile -t build-chat'
                 
             }
         }
